@@ -55,3 +55,9 @@ module "eks" {
     Terraform   = "true"
   }
 }
+
+module "s3" {
+  source = "/EKS/modules/s3"
+  aws_region = "us-east-1"
+  bucket_name = var.bucket_name
+}
