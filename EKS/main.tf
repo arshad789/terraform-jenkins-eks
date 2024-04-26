@@ -58,6 +58,5 @@ module "eks" {
 
 module "s3" {
   source = "github.com/arshad789/terraform-jenkins-eks//EKS/modules/s3"
-  aws_region = "us-east-1"
   bucket_name = var.bucket_name
 }
