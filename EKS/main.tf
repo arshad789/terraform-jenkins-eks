@@ -56,7 +56,10 @@ module "eks" {
   }
 }
 
-module "s3" {
-  source = "github.com/arshad789/terraform-jenkins-eks/EKS/modules/s3"
-  bucket_name = var.bucket_name
+module "ec2_module" {
+  source        = "github.com/arshad789/terraform-jenkins-eks/EKS/modules/ec2"
+  ami           = "ami-12345678"
+  instance_type = "t2.micro"
+  
 }
+
